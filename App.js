@@ -1,12 +1,7 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import SwitchNavigator from './src/navigation/switchNavigation';
 
-const App = () => {
-  return (
-    <View>
-      <Text>Welcome</Text>
-    </View>
-  );
-};
-
-export default App;
+export default function App() {
+  return <SwitchNavigator />;
+}
