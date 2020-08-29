@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import MainNavigator from './mainNavigation';
+import TabNavigator from './tabNavigation';
+import AuthNavigator from './authNavigation';
 
 function SwitchNavigator() {
   return (
     <NavigationContainer>
-      <MainNavigator />
+      <TabNavigator />
+      {/* <AuthNavigator /> */}
     </NavigationContainer>
   );
 }
