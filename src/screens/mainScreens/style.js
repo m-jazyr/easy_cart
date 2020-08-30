@@ -1,5 +1,6 @@
 import { StyleSheet, Dimensions } from 'react-native';
 import colors from '../../assets/colors';
+import fonts from '../../assets/fonts';
 
 const screen = Dimensions.get('window');
 const categoryTileWidth = screen.width / 2 - screen.width * 0.1;
@@ -33,6 +34,19 @@ const styles = StyleSheet.create({
   },
   categoryListContainer: {
     paddingHorizontal: screen.width * 0.05,
+  },
+  addMoreText: {
+    fontSize: 14,
+    margin: 16,
+    flexGrow: 1,
+    textAlign: 'right',
+    fontFamily: fonts.montserratRegular,
+    color: colors.warning,
+  },
+  checkoutBottomBar: {
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
   },
 });
 
