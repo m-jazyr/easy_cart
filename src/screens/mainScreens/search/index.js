@@ -1,18 +1,14 @@
 import * as React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View } from 'react-native';
 import styles from '../style';
-import { Header } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import SearchBarComponent from '../../../components/searchBar';
 
-function SearchScreen({ navigation }) {
+function SearchScreen() {
   return (
     <View style={styles.container}>
-      <Header
-        containerStyle={styles.headerContainerStyle}
-        rightComponent={<Icon name={'bell'} size={20} color={'white'} />}
-      />
-      <Text>Search Screen</Text>
-      <Button title="profile" onPress={() => navigation.navigate('Profile')} />
+      <SafeAreaView />
+      <SearchBarComponent />
     </View>
   );
 }
