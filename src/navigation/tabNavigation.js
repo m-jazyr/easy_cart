@@ -5,7 +5,7 @@ import CartScreen from '../screens/mainScreens/cart';
 import ProfileScreen from '../screens/mainScreens/profile';
 import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
 import SearchScreen from '../screens/mainScreens/search';
-import { colors } from 'react-native-elements';
+import colors from '../assets/colors';
 // import colors from '../assets/colors';
 
 const Tab = createBottomTabNavigator();

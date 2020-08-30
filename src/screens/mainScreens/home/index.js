@@ -1,18 +1,39 @@
 import * as React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity } from 'react-native';
 import styles from '../style';
 import { Header } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { sampleCategories } from '../../../utils/constants';
+import HeaderLocation from '../../../components/headerLocation';
+import HeaderNotification from '../../../components/headerNotification';
 
 function HomeScreen({ navigation }) {
+  const renderCategories = ({ item }) => {
+    return (
+      <TouchableOpacity
+        style={styles.categoryTileContainer}
+        onPress={() => navigation.navigate('Products')}>
+        <item.image height={50} width={50} />
+        <Text>{item.name}</Text>
+      </TouchableOpacity>
+    );
+  };
+
   return (
     <View style={styles.container}>
       <Header
         containerStyle={styles.headerContainerStyle}
-        rightComponent={<Icon name={'bell'} size={20} color={'white'} />}
+        leftComponent={<HeaderLocation navigation={navigation} />}
+        rightComponent={<HeaderNotification navigation={navigation} />}
       />
-      <Text>Home Screen</Text>
-      <Button title="profile" onPress={() => navigation.navigate('Profile')} />
+
+      <FlatList
+        style={styles.categoryListContainer}
+        numColumns={2}
+        renderItem={renderCategories}
+        data={sampleCategories}
+        keyExtractor={(item) => item.id}
+        ListHeaderComponent={() => <Text>Category</Text>}
+      />
     </View>
   );
 }
