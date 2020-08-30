@@ -4,7 +4,7 @@ import styles from '../style';
 import { Header } from 'react-native-elements';
 import { sampleCategories } from '../../../utils/constants';
 import HeaderLocation from '../../../components/headerLocation';
-import HeaderNotification from '../../../components/headerNotification';
+import HeaderCart from '../../../components/headerCart';
 
 function HomeScreen({ navigation }) {
   const renderCategories = ({ item }) => {
@@ -23,7 +23,7 @@ function HomeScreen({ navigation }) {
       <Header
         containerStyle={styles.headerContainerStyle}
         leftComponent={<HeaderLocation navigation={navigation} />}
-        rightComponent={<HeaderNotification navigation={navigation} />}
+        rightComponent={<HeaderCart navigation={navigation} />}
       />
 
       <FlatList

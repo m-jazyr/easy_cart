@@ -5,6 +5,7 @@ import {
 } from '@react-navigation/stack';
 import TabNavigator from './tabNavigation';
 import ProductsScreen from '../screens/mainScreens/products';
+import CartScreen from '../screens/mainScreens/cart';
 const Stack = createStackNavigator();
 
 const MainNavigator = () => {
@@ -17,6 +18,7 @@ const MainNavigator = () => {
         }}>
         <Stack.Screen name="Home" component={TabNavigator} />
         <Stack.Screen name="Products" component={ProductsScreen} />
+        <Stack.Screen name="Cart" component={CartScreen} />
       </Stack.Navigator>
     </>
   );

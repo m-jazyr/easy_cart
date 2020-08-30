@@ -11,7 +11,6 @@ import {
 import colors from '../assets/colors';
 import fonts from '../assets/fonts';
 import { images } from '../assets/images';
-import { Badge } from 'react-native-elements';
 
 const screen = Dimensions.get('window');
 const productTileWidth = screen.width / 2 - screen.width * 0.1;
