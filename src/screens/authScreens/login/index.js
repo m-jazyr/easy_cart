@@ -1,15 +1,15 @@
 import * as React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, KeyboardAvoidingView, Text } from 'react-native';
 import styles from '../style';
+import PhoneNumberBar from '../../../components/phoneNumberBar';
 
 function LoginScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>Login Screen</Text>
-      <Button
-        title="verify"
-        onPress={() => navigation.navigate('Verification')}
-      />
+      <Text>Shop name</Text>
+      <KeyboardAvoidingView style={styles.phoneNumberBar} behavior="padding">
+        <PhoneNumberBar navigation={navigation} />
+      </KeyboardAvoidingView>
     </View>
   );
 }

@@ -6,8 +6,8 @@ import MainNavigator from './mainNavigation';
 function SwitchNavigator() {
   return (
     <NavigationContainer>
-      <MainNavigator />
-      {/* <AuthNavigator /> */}
+      {/* <MainNavigator /> */}
+      <AuthNavigator />
     </NavigationContainer>
   );
 }
