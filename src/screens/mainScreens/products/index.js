@@ -27,7 +27,7 @@ function ProductsScreen({ navigation }) {
         ListHeaderComponent={() => <Text>Products</Text>}
         ListFooterComponent={() => <View style={styles.dummmyListFooter} />}
       />
-      <BottomCartSummary />
+      <BottomCartSummary navigation={navigation} />
     </View>
   );
 }

@@ -4,18 +4,17 @@ import colors from '../assets/colors';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import fonts from '../assets/fonts';
 
-function AddressComponentBar() {
+function CheckoutBar() {
   return (
     <View style={styles.container}>
       <Icon name={'google-maps'} size={20} style={styles.leftIcon} />
-      <View style={styles.locationContainer}>
-        <View style={styles.addressContainer}>
-          <Text style={styles.deliverText}>Deliver to : </Text>
-          <Text style={styles.addressTitle}>Home</Text>
-        </View>
-        <Text style={styles.address}>Address</Text>
+      <View style={styles.otherContainer}>
+        <Text style={styles.totalText}>Total :</Text>
+        <Text style={styles.priceText}>Rs 140</Text>
       </View>
-      <Text style={styles.changeText}>Change</Text>
+      <View style={styles.checkoutContainer}>
+        <Text style={styles.checkoutText}>Checkout</Text>
+      </View>
     </View>
   );
 }
@@ -34,38 +33,38 @@ const styles = StyleSheet.create({
     width: '10%',
     color: colors.primary,
   },
-  locationContainer: {
+  otherContainer: {
     flexGrow: 1,
     marginRight: 8,
+    flexDirection: 'row',
   },
-  changeText: {
+  totalText: {
     fontSize: 12,
-    padding: 4,
+    paddingVertical: 4,
+    paddingHorizontal: 8,
+    fontFamily: fonts.montserratRegular,
+    color: colors.black,
+  },
+  priceText: {
+    fontSize: 12,
+    paddingVertical: 4,
+    paddingHorizontal: 8,
     fontFamily: fonts.montserratRegular,
     color: colors.primary,
   },
-  deliverText: {
-    fontSize: 10,
-    fontFamily: fonts.robotoThin,
-    color: colors.black,
-  },
-  addressContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  addressTitle: {
+  checkoutText: {
     fontSize: 12,
-    marginRight: 8,
+    paddingVertical: 4,
+    paddingHorizontal: 8,
     fontFamily: fonts.montserratRegular,
-    color: colors.black,
-    textTransform: 'uppercase',
+    color: colors.white,
   },
-  address: {
-    fontSize: 12,
-    marginRight: 8,
-    fontFamily: fonts.robotoCondensedLight,
-    color: colors.grey4,
+  checkoutContainer: {
+    backgroundColor: colors.primary,
+    borderRadius: 16,
+    padding: 4,
+    alignItems: 'center',
   },
 });
 
-export default AddressComponentBar;
+export default CheckoutBar;

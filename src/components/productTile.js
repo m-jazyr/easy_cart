@@ -11,6 +11,7 @@ import {
 import colors from '../assets/colors';
 import fonts from '../assets/fonts';
 import { images } from '../assets/images';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const screen = Dimensions.get('window');
 const productTileWidth = screen.width / 2 - screen.width * 0.1;
@@ -36,7 +37,10 @@ function ProductTile({ item }) {
       <View style={styles.tileBottomPartContainer}>
         <Text style={styles.productName}>{item.name}</Text>
         <View>
-          <Text style={styles.unitText}>1 kg</Text>
+          <View style={styles.unitContainer}>
+            <Text style={styles.unitText}>1 Kg</Text>
+            <Icon name={'chevron-down'} size={15} style={styles.downIcon} />
+          </View>
           <View style={styles.tilePriceContainer}>
             <View>
               <Text style={styles.priceText}>Rs 45</Text>
@@ -116,9 +120,17 @@ const styles = StyleSheet.create({
     textTransform: 'capitalize',
     color: colors.black,
   },
+  unitContainer: {
+    marginBottom: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  downIcon: {
+    marginLeft: 4,
+    color: colors.white,
+  },
   unitText: {
     fontSize: 11,
-    marginBottom: 4,
     fontFamily: fonts.montserratRegular,
     color: colors.grey5,
     textTransform: 'uppercase',
@@ -132,7 +144,7 @@ const styles = StyleSheet.create({
     fontSize: 11,
     textDecorationLine: 'line-through',
     fontFamily: fonts.montserratRegular,
-    color: colors.black,
+    color: colors.grey2,
   },
   discountBadge: {
     position: 'absolute',

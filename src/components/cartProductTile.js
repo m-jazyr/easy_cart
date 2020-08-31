@@ -2,30 +2,34 @@ import * as React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import colors from '../assets/colors';
 import fonts from '../assets/fonts';
-import Icon from 'react-native-vector-icons/Entypo';
+import Entypo from 'react-native-vector-icons/Entypo';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 function CartProductTile({ item }) {
   const [count, setCount] = React.useState(1);
 
   return (
     <View style={styles.productTileContainer}>
-      <Icon name={'dot-single'} size={20} style={styles.leftIcon} />
+      <Entypo name={'dot-single'} size={20} style={styles.leftIcon} />
       <View style={styles.nameContainer}>
         <Text style={styles.productName}>{item.name}</Text>
-        <Text style={styles.unitText}>1 Kg</Text>
+        <View style={styles.unitContainer}>
+          <Text style={styles.unitText}>1 Kg</Text>
+          <Icon name={'chevron-down'} size={15} style={styles.downIcon} />
+        </View>
       </View>
       <View style={styles.counterContainer}>
         <Icon
           name={'plus'}
           color={colors.primary}
-          size={25}
+          size={20}
           onPress={() => setCount(count + 1)}
         />
         <Text style={styles.countText}>{count}</Text>
         <Icon
           name={'minus'}
           color={colors.grey5}
-          size={25}
+          size={20}
           onPress={() => setCount(count - 1)}
         />
       </View>
@@ -36,13 +40,14 @@ function CartProductTile({ item }) {
 
 const styles = StyleSheet.create({
   productTileContainer: {
-    width: '95%',
+    width: '100%',
     flexDirection: 'row',
-    marginHorizontal: 8,
+    paddingHorizontal: 8,
     alignItems: 'center',
     borderBottomWidth: 0.3,
     borderColor: colors.grey0,
     height: 60,
+    backgroundColor: colors.white,
   },
   leftIcon: {
     width: '5%',
@@ -50,6 +55,13 @@ const styles = StyleSheet.create({
   },
   nameContainer: {
     width: '55%',
+    marginLeft: 8,
+  },
+  unitContainer: {
+    flexDirection: 'row',
+  },
+  downIcon: {
+    color: colors.white,
   },
   counterContainer: {
     backgroundColor: colors.white,

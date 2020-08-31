@@ -4,13 +4,15 @@ import colors from '../assets/colors';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import fonts from '../assets/fonts';
 
-function BottomCartSummary() {
+function BottomCartSummary({ navigation }) {
   return (
     <View style={styles.bottomCartSummary}>
       <Icon name={'cart'} size={20} color={colors.grey3} />
       <Text style={styles.unitText}>1 Item : </Text>
       <Text style={styles.priceText}>Rs 40</Text>
-      <TouchableOpacity style={styles.viewCartButton}>
+      <TouchableOpacity
+        style={styles.viewCartButton}
+        onPress={() => navigation.navigate('Cart')}>
         <Text style={styles.viewCartText}>View cart</Text>
       </TouchableOpacity>
     </View>

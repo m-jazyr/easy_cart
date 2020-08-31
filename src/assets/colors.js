@@ -1,9 +1,12 @@
 import { themeOptions } from './themes';
 
-const colorTheme = themeOptions.theme1;
+const colorTheme = themeOptions.blue;
 const colors = {
   primary: colorTheme.c1,
   secondary: colorTheme.c2,
+  third: colorTheme.c3,
+  fourth: colorTheme.c4,
+  fifth: colorTheme.c5,
   background: '#ECF0F1',
   white: colorTheme.light ? '#FFFFFF' : '#000000',
   black: colorTheme.light ? '#000000' : '#FFFFFF',
@@ -19,6 +22,7 @@ const colors = {
   error: '#FF0D10',
   warning: '#F5B041',
   divider: '#515A5A',
+  link: '#3498DB',
 };
 
 export default colors;

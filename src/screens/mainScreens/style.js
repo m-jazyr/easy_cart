@@ -41,12 +41,15 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     textAlign: 'right',
     fontFamily: fonts.montserratRegular,
-    color: colors.warning,
+    color: colors.link,
   },
   checkoutBottomBar: {
     position: 'absolute',
     bottom: 0,
     width: '100%',
+  },
+  backgroundWhite: {
+    backgroundColor: colors.background,
   },
 });
 
