@@ -1,19 +1,25 @@
 import * as React from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  TouchableOpacity,
-  Platform,
-} from 'react-native';
+import { StyleSheet, View, Text, Platform } from 'react-native';
 import colors from '../assets/colors';
 import fonts from '../assets/fonts';
 import { Input } from 'react-native-elements';
+import { Keyboard } from 'react-native';
+import MainButton from './mainButton';
 
 function PhoneNumberBar({ navigation }) {
+  const [number, setNumber] = React.useState('');
+
+  const onPressContinue = () => {
+    Keyboard.dismiss();
+    navigation.navigate('Verification');
+  };
   return (
     <View style={styles.phoneNumberBar}>
       <Input
+        maxLength={10}
+        autoFocus={true}
+        value={number}
+        onChangeText={(text) => setNumber(text)}
         containerStyle={styles.inputContainer}
         inputContainerStyle={styles.textInputContainer}
         inputStyle={styles.inputText}
@@ -22,11 +28,11 @@ function PhoneNumberBar({ navigation }) {
         keyboardType={'number-pad'}
       />
       <View style={styles.rightItemContainer}>
-        <TouchableOpacity
-          style={styles.continueButtonContainer}
-          onPress={() => navigation.navigate('Verification')}>
-          <Text style={styles.continueText}>Continue</Text>
-        </TouchableOpacity>
+        <MainButton
+          title={'Continue'}
+          onPress={onPressContinue}
+          disabled={number.length < 10}
+        />
       </View>
     </View>
   );
@@ -56,19 +62,6 @@ const styles = StyleSheet.create({
   },
   rightItemContainer: {
     width: '30%',
-  },
-  continueButtonContainer: {
-    backgroundColor: colors.primary,
-    borderRadius: 16,
-    marginHorizontal: 16,
-    alignItems: 'center',
-    paddingHorizontal: 8,
-    paddingVertical: 16,
-  },
-  continueText: {
-    fontSize: 12,
-    fontFamily: fonts.montserratRegular,
-    color: colors.white,
   },
   inputText: {
     fontSize: 15,
