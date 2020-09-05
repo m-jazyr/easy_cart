@@ -42,7 +42,7 @@ function VerificationScreen({ navigation }) {
         <MainButton
           title={'Verify and Continue'}
           disabled={otp.length < 4}
-          onPress={() => console.log('verify')}
+          onPress={() => navigation.navigate('Main')}
         />
       </KeyboardAvoidingView>
     </View>

@@ -44,9 +44,15 @@ const styles = StyleSheet.create({
     color: colors.link,
   },
   checkoutBottomBar: {
-    position: 'absolute',
-    bottom: 0,
     width: '100%',
+    shadowOffset: {
+      width: 0,
+      height: 0,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 20,
+    backgroundColor: colors.white,
   },
   backgroundWhite: {
     backgroundColor: colors.background,
