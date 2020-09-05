@@ -29,6 +29,13 @@ const styles = StyleSheet.create({
     width: '100%',
     paddingHorizontal: 16,
     alignItems: 'center',
+    shadowOffset: {
+      width: 0,
+      height: 0,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 5,
   },
   viewCartButton: {
     right: 0,

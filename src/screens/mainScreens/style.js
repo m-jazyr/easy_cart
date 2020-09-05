@@ -35,6 +35,10 @@ const styles = StyleSheet.create({
   categoryListContainer: {
     paddingHorizontal: screen.width * 0.05,
   },
+  productListContainer: {
+    paddingHorizontal: screen.width * 0.05,
+    marginBottom: 60,
+  },
   addMoreText: {
     fontSize: 14,
     margin: 16,

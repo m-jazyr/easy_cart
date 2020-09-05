@@ -19,7 +19,7 @@ function ProductsScreen({ navigation }) {
         containerStyle={styles.headerContainerStyle}
       />
       <FlatList
-        style={styles.categoryListContainer}
+        style={styles.productListContainer}
         numColumns={2}
         renderItem={renderCategories}
         data={sampleCategories}
