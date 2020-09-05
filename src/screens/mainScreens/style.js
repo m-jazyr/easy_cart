@@ -51,6 +51,53 @@ const styles = StyleSheet.create({
   backgroundWhite: {
     backgroundColor: colors.background,
   },
+  addressBottomPart: {
+    width: '100%',
+    backgroundColor: colors.white,
+    marginBottom: 14,
+    marginTop: 20,
+  },
+  mapContainer: {
+    flexGrow: 1,
+    backgroundColor: colors.grey0,
+  },
+  addressSaveAsContainer: {
+    flexDirection: 'row',
+    marginBottom: 8,
+    alignItems: 'center',
+    marginLeft: 16,
+    paddingVertical: 4,
+  },
+  saveAsButton: {
+    borderRadius: 20,
+    borderWidth: 0.5,
+    height: 28,
+    paddingVertical: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 8,
+    marginHorizontal: 8,
+    borderColor: colors.grey2,
+  },
+  saveAsButtonText: {
+    fontSize: 12,
+    fontFamily: fonts.montserratRegular,
+    color: colors.grey2,
+  },
+  saveAsText: {
+    marginStart: 4,
+    fontSize: 11,
+    textTransform: 'uppercase',
+    fontFamily: fonts.robotoBold,
+    color: colors.grey2,
+  },
+  selected: {
+    borderColor: colors.primary,
+    color: colors.primary,
+  },
+  leftIcon: {
+    color: colors.primary,
+  },
 });
 
 export default styles;

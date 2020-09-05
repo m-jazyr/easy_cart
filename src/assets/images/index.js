@@ -1,4 +1,4 @@
-import dummy1 from './dummy_playlist/Image_155.png';
+import dummy1 from './dummy_playlist/groceries.png';
 import burger from './burger.svg';
 import fries from './fries.svg';
 import food from './food.svg';
