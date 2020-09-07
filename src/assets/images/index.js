@@ -4,6 +4,9 @@ import fries from './fries.svg';
 import food from './food.svg';
 import vegetable from './vegetable.svg';
 import cake from './cake.svg';
+import address from './address.svg';
+import info from './info.svg';
+import contactUs from './contact-us.svg';
 
 export const images = {
   dummy1,
@@ -12,4 +15,7 @@ export const images = {
   food,
   vegetable,
   cake,
+  address,
+  info,
+  contactUs,
 };

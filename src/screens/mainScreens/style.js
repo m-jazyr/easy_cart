@@ -108,6 +108,36 @@ const styles = StyleSheet.create({
   leftIcon: {
     color: colors.primary,
   },
+  profileHeader: {
+    marginVertical: 24,
+    marginHorizontal: 16,
+  },
+  profilePhoneText: {
+    fontSize: 14,
+    fontFamily: fonts.montserratRegular,
+    color: colors.black,
+  },
+  profileEditText: {
+    fontSize: 11,
+    fontFamily: fonts.robotoRegular,
+    color: colors.link,
+  },
+  profileEdit: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 4,
+  },
+  profileOptionsText: {
+    fontSize: 14,
+    fontFamily: fonts.robotoRegular,
+    color: colors.black,
+  },
+  profileOptionsIcon: {
+    height: 30,
+    width: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
 
 export default styles;

@@ -52,3 +52,18 @@ export const sampleCategories = [
     image: images.vegetable,
   },
 ];
+
+export const profileOptions = [
+  {
+    name: 'Saved Addresses',
+    icon: images.address,
+  },
+  {
+    name: 'Contact us',
+    icon: images.contactUs,
+  },
+  {
+    name: 'About',
+    icon: images.info,
+  },
+];
