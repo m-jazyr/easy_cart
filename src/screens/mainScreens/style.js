@@ -138,6 +138,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  orderContainer: {
+    height: 100,
+    paddingHorizontal: 16,
+    backgroundColor: colors.background,
+  },
 });
 
 export default styles;
