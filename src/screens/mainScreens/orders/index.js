@@ -3,10 +3,10 @@ import { View, Text, FlatList } from 'react-native';
 import styles from '../style';
 import { Header, ListItem } from 'react-native-elements';
 import BackArrow from '../../../components/backArrow';
-import { sampleCategories } from '../../../utils/constants';
+import OrderProductTile from '../../../components/orderProductTile';
+import { sampleCategories, profileOptions } from '../../../utils/constants';
 import colors from '../../../assets/colors';
 import { images } from '../../../assets/images';
-import CartProductTile from '../../../components/cartProductTile';
 
 function OrdersScreen({ navigation }) {
   const [showOrder, setShowOrder] = React.useState('');
@@ -34,7 +34,13 @@ function OrdersScreen({ navigation }) {
         </ListItem>
         {showOrder === index && (
           <View style={styles.orderContainer}>
-            <Text>{item.name}</Text>
+            {profileOptions.map((product) => (
+              <OrderProductTile item={product} />
+            ))}
+            <View style={styles.orderTotalContainer}>
+              <Text style={styles.profilePhoneText}>Total</Text>
+              <Text style={styles.profilePhoneText}>Rs 140</Text>
+            </View>
           </View>
         )}
       </>

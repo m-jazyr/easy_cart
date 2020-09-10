@@ -139,9 +139,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   orderContainer: {
-    height: 100,
     paddingHorizontal: 16,
-    backgroundColor: colors.background,
+    paddingBottom: 8,
+  },
+  orderTotalContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 12,
+    paddingVertical: 12,
   },
 });
 
