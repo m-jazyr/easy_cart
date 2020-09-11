@@ -5,11 +5,19 @@ import { Header, ListItem } from 'react-native-elements';
 import BackArrow from '../../../components/backArrow';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import colors from '../../../assets/colors';
-import { profileOptions } from '../../../utils/constants';
+import { profileOptions, USER_TOKEN } from '../../../utils/constants';
+import { useDispatch } from 'react-redux';
+import { removeToken } from '../../../redux/mainSlice';
+import { removeValue } from '../../../utils/storage';
 
 function ProfileScreen({ navigation }) {
+  const dispatch = useDispatch();
+  const onPressAction = (item) => {
+    removeValue(USER_TOKEN);
+    dispatch(removeToken());
+  };
   const renderItem = ({ item }) => (
-    <ListItem>
+    <ListItem onPress={() => onPressAction(item)}>
       <View style={styles.profileOptionsIcon}>
         <item.icon height={25} width={25} />
       </View>
@@ -18,7 +26,10 @@ function ProfileScreen({ navigation }) {
           {item.name}
         </ListItem.Title>
       </ListItem.Content>
-      <ListItem.Chevron type={'material-community'} name={'chevron-right'} />
+      <ListItem.Chevron
+        type={'material-community'}
+        name={item.id === 0 ? null : 'chevron-right'}
+      />
     </ListItem>
   );
 

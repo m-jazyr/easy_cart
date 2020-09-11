@@ -4,9 +4,19 @@ import styles from '../style';
 import { Header, Input } from 'react-native-elements';
 import BackArrow from '../../../components/backArrow';
 import MainButton from '../../../components/mainButton';
+import { useDispatch } from 'react-redux';
+import { setToken } from '../../../redux/mainSlice';
+import { storeValue } from '../../../utils/storage';
+import { USER_TOKEN } from '../../../utils/constants';
 
 function VerificationScreen({ navigation }) {
   const [otp, setOtp] = React.useState('');
+  const dispatch = useDispatch();
+
+  const onVerifyOTP = () => {
+    storeValue(USER_TOKEN, otp);
+    dispatch(setToken(otp));
+  };
 
   return (
     <View style={styles.container}>
@@ -42,7 +52,7 @@ function VerificationScreen({ navigation }) {
         <MainButton
           title={'Verify and Continue'}
           disabled={otp.length < 4}
-          onPress={() => navigation.navigate('Main')}
+          onPress={() => onVerifyOTP()}
         />
       </KeyboardAvoidingView>
     </View>

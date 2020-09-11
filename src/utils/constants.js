@@ -1,5 +1,6 @@
 import { images } from '../assets/images';
 
+export const USER_TOKEN = 'user-token';
 export const sampleCategories = [
   {
     id: 1,
@@ -55,15 +56,23 @@ export const sampleCategories = [
 
 export const profileOptions = [
   {
+    id: 1,
     name: 'Saved Addresses',
     icon: images.address,
   },
   {
+    id: 2,
     name: 'Contact us',
     icon: images.contactUs,
   },
   {
+    id: 3,
     name: 'About',
     icon: images.info,
+  },
+  {
+    id: 0,
+    name: 'Log out',
+    icon: images.logout,
   },
 ];

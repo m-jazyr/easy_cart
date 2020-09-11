@@ -8,6 +8,7 @@ import address from './address.svg';
 import info from './info.svg';
 import order from './order.svg';
 import contactUs from './contact-us.svg';
+import logout from './logout.svg';
 
 export const images = {
   dummy1,
@@ -20,4 +21,5 @@ export const images = {
   info,
   contactUs,
   order,
+  logout,
 };
