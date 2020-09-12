@@ -8,12 +8,14 @@ import colors from '../../../assets/colors';
 import { profileOptions, USER_TOKEN } from '../../../utils/constants';
 import { useDispatch } from 'react-redux';
 import { removeToken } from '../../../redux/mainSlice';
+import { resetCart } from '../../../redux/cartSlice';
 import { removeValue } from '../../../utils/storage';
 
 function ProfileScreen({ navigation }) {
   const dispatch = useDispatch();
   const onPressAction = (item) => {
     removeValue(USER_TOKEN);
+    dispatch(resetCart());
     dispatch(removeToken());
   };
   const renderItem = ({ item }) => (
