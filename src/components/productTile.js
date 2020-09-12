@@ -8,10 +8,13 @@ import {
   Dimensions,
   Alert,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { useDispatch } from 'react-redux';
+
 import colors from '../assets/colors';
 import fonts from '../assets/fonts';
 import { images } from '../assets/images';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { addToCart } from '../redux/cartSlice';
 
 const screen = Dimensions.get('window');
 const productTileWidth = screen.width / 2 - screen.width * 0.1;
@@ -19,6 +22,10 @@ const productTileHeight = screen.width / 2;
 const productTileMargin = screen.width * 0.025;
 
 function ProductTile({ item }) {
+  const dispatch = useDispatch();
+  const addItemToCart = () => {
+    dispatch(addToCart(item));
+  };
   return (
     <TouchableOpacity
       style={styles.productTileContainer}
@@ -46,7 +53,9 @@ function ProductTile({ item }) {
               <Text style={styles.priceText}>Rs 45</Text>
               <Text style={styles.discountedPrice}>Rs 45</Text>
             </View>
-            <TouchableOpacity style={styles.addCartButton}>
+            <TouchableOpacity
+              style={styles.addCartButton}
+              onPress={() => addItemToCart()}>
               <Text style={styles.addCartText}>+ ADD</Text>
             </TouchableOpacity>
           </View>

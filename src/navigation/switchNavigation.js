@@ -17,7 +17,7 @@ function SwitchNavigator() {
 
   React.useEffect(() => {
     fetchToken();
-  });
+  }, []);
 
   return (
     <NavigationContainer>

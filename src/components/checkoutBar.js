@@ -1,16 +1,20 @@
 import * as React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
+import { useSelector } from 'react-redux';
+
 import colors from '../assets/colors';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import fonts from '../assets/fonts';
 
 function CheckoutBar() {
+  const cart = useSelector((state) => state.cart);
+
   return (
     <View style={styles.container}>
       <Icon name={'google-maps'} size={20} style={styles.leftIcon} />
       <View style={styles.otherContainer}>
         <Text style={styles.totalText}>Total :</Text>
-        <Text style={styles.priceText}>Rs 140</Text>
+        <Text style={styles.priceText}>Rs {cart.totalPrice}</Text>
       </View>
       <View style={styles.checkoutContainer}>
         <Text style={styles.checkoutText}>Checkout</Text>

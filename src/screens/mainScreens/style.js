@@ -37,6 +37,8 @@ const styles = StyleSheet.create({
   },
   productListContainer: {
     paddingHorizontal: screen.width * 0.05,
+  },
+  bottomMargin: {
     marginBottom: 60,
   },
   addMoreText: {

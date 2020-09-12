@@ -3,12 +3,13 @@ import Icon from 'react-native-vector-icons/Feather';
 import colors from '../assets/colors';
 
 function BackArrow({ navigation, color }) {
+  const index = navigation.canGoBack();
   return (
     <Icon
-      name="arrow-left"
+      name={index ? 'arrow-left' : null}
       size={20}
       color={color ? color : colors.primary}
-      onPress={() => navigation.goBack()}
+      onPress={() => (index ? navigation.goBack() : null)}
     />
   );
 }

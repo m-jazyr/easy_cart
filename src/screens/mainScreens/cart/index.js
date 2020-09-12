@@ -1,14 +1,16 @@
 import * as React from 'react';
 import { View, Text, FlatList } from 'react-native';
-import styles from '../style';
+import { useSelector } from 'react-redux';
 import { Header } from 'react-native-elements';
+
+import styles from '../style';
 import BackArrow from '../../../components/backArrow';
-import { sampleCategories } from '../../../utils/constants';
 import CartProductTile from '../../../components/cartProductTile';
 import AddressComponentBar from '../../../components/addressComponentBar';
 import CheckoutBar from '../../../components/checkoutBar';
 
 function CartScreen({ navigation }) {
+  const cart = useSelector((state) => state.cart);
   const renderCartItems = ({ item }) => {
     return <CartProductTile item={item} />;
   };
@@ -22,16 +24,22 @@ function CartScreen({ navigation }) {
       />
       <FlatList
         renderItem={renderCartItems}
-        data={sampleCategories}
+        data={cart.items}
         keyExtractor={(item) => item.id.toString()}
         ListHeaderComponent={() => (
-          <Text style={styles.addMoreText}>+ Add more</Text>
+          <Text
+            style={styles.addMoreText}
+            onPress={() => navigation.navigate('Products')}>
+            {cart.totalCount !== 0 && '+ Add more'}
+          </Text>
         )}
       />
-      <View style={styles.checkoutBottomBar}>
-        <AddressComponentBar />
-        <CheckoutBar />
-      </View>
+      {cart.totalCount !== 0 && (
+        <View style={styles.checkoutBottomBar}>
+          <AddressComponentBar />
+          <CheckoutBar />
+        </View>
+      )}
     </View>
   );
 }

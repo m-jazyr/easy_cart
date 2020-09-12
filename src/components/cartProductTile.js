@@ -1,12 +1,22 @@
 import * as React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import colors from '../assets/colors';
-import fonts from '../assets/fonts';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { useDispatch } from 'react-redux';
+import { addToCart, removeFromCart } from '../redux/cartSlice';
+
+import colors from '../assets/colors';
+import fonts from '../assets/fonts';
 
 function CartProductTile({ item }) {
-  const [count, setCount] = React.useState(1);
+  const dispatch = useDispatch();
+
+  const addItemToCart = () => {
+    dispatch(addToCart(item));
+  };
+  const removeItemFromCart = () => {
+    dispatch(removeFromCart(item));
+  };
 
   return (
     <View style={styles.productTileContainer}>
@@ -23,17 +33,17 @@ function CartProductTile({ item }) {
           name={'plus'}
           color={colors.primary}
           size={20}
-          onPress={() => setCount(count + 1)}
+          onPress={() => addItemToCart()}
         />
-        <Text style={styles.countText}>{count}</Text>
+        <Text style={styles.countText}>{item.count}</Text>
         <Icon
           name={'minus'}
           color={colors.grey5}
           size={20}
-          onPress={() => setCount(count - 1)}
+          onPress={() => removeItemFromCart()}
         />
       </View>
-      <Text style={styles.priceText}>Rs 40</Text>
+      <Text style={styles.priceText}>Rs {item.price * item.count}</Text>
     </View>
   );
 }
