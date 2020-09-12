@@ -32,14 +32,14 @@ function CartProductTile({ item }) {
         <Icon
           name={'plus'}
           color={colors.primary}
-          size={20}
+          size={22}
           onPress={() => addItemToCart()}
         />
         <Text style={styles.countText}>{item.count}</Text>
         <Icon
           name={'minus'}
           color={colors.grey5}
-          size={20}
+          size={22}
           onPress={() => removeItemFromCart()}
         />
       </View>

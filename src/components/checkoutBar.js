@@ -11,7 +11,7 @@ function CheckoutBar() {
 
   return (
     <View style={styles.container}>
-      <Icon name={'google-maps'} size={20} style={styles.leftIcon} />
+      <Icon name={'cart-arrow-right'} size={20} style={styles.leftIcon} />
       <View style={styles.otherContainer}>
         <Text style={styles.totalText}>Total :</Text>
         <Text style={styles.priceText}>Rs {cart.totalPrice}</Text>

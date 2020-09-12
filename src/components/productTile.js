@@ -27,16 +27,13 @@ function ProductTile({ item }) {
     dispatch(addToCart(item));
   };
   return (
-    <TouchableOpacity
-      style={styles.productTileContainer}
-      onPress={() => Alert.alert('item.name')}>
+    <TouchableOpacity style={styles.productTileContainer} onPress={() => null}>
       <View style={styles.tileImageContainer}>
         <Image
           source={images.dummy1}
           resizeMode={'cover'}
           style={styles.tileImage}
         />
-        {/* <item.image height={50} width={50} /> */}
       </View>
       <View style={styles.discountBadge}>
         <Text style={styles.discountBadgeText}>10% OFF</Text>
@@ -84,10 +81,10 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   addCartButton: {
-    backgroundColor: colors.white,
+    backgroundColor: colors.success,
     borderWidth: 0.5,
     borderColor: colors.grey0,
-    borderRadius: 12,
+    borderRadius: 16,
     width: 60,
     justifyContent: 'space-evenly',
     alignItems: 'center',
@@ -95,8 +92,8 @@ const styles = StyleSheet.create({
   },
   addCartText: {
     fontSize: 12,
-    fontFamily: fonts.robotoRegular,
-    color: colors.primary,
+    fontFamily: fonts.montserratRegular,
+    color: colors.white,
   },
   tileImageContainer: {
     height: '60%',
