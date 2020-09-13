@@ -7,6 +7,7 @@ import AddressInputField from '../../../components/addressInputField';
 import BackArrow from '../../../components/backArrow';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 
 function AddressScreen({ navigation }) {
   return (
@@ -17,7 +18,22 @@ function AddressScreen({ navigation }) {
         leftComponent={<BackArrow navigation={navigation} />}
       />
       <View style={styles.mapContainer}>
-        <Text>map</Text>
+        <MapView
+          provider={PROVIDER_GOOGLE}
+          style={styles.mapContainer}
+          region={{
+            latitude: 37.78825,
+            longitude: -122.4324,
+            latitudeDelta: 0.02,
+            longitudeDelta: 0.02,
+          }}>
+          <Marker
+            coordinate={{
+              latitude: 37.78825,
+              longitude: -122.4324,
+            }}
+          />
+        </MapView>
       </View>
       <KeyboardAvoidingView
         behavior={'padding'}
