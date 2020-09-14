@@ -9,6 +9,7 @@ import info from './info.svg';
 import order from './order.svg';
 import contactUs from './contact-us.svg';
 import logout from './logout.svg';
+import pin from './pin.svg';
 
 export const images = {
   dummy1,
@@ -22,4 +23,5 @@ export const images = {
   contactUs,
   order,
   logout,
+  pin,
 };

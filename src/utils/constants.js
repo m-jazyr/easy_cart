@@ -1,6 +1,14 @@
 import { images } from '../assets/images';
 
 export const USER_TOKEN = 'user-token';
+export const LOCATION = 'location';
+export const DEFAULT_REGION = {
+  latitude: 37.78825,
+  longitude: -122.4324,
+  latitudeDelta: 0.01,
+  longitudeDelta: 0.01,
+};
+
 export const sampleCategories = [
   {
     id: 1,

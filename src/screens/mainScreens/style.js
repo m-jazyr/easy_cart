@@ -150,6 +150,43 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 12,
   },
+  mapMarker: {
+    position: 'absolute',
+    left: '50%',
+    top: '50%',
+    marginLeft: -15,
+    marginTop: -30,
+  },
+  mapLocation: {
+    position: 'absolute',
+    left: '50%',
+    top: '50%',
+    width: 350,
+    backgroundColor: colors.white,
+    borderRadius: 6,
+    paddingVertical: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: -175,
+    marginTop: -70,
+    elevation: 5,
+    shadowOffset: {
+      width: 0,
+      height: 0,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+  },
+  mapLocationText: {
+    fontSize: 12,
+    fontFamily: fonts.robotoRegular,
+    color: colors.black,
+  },
+  mapLocationTitle: {
+    fontSize: 12,
+    fontFamily: fonts.robotoBold,
+    color: colors.black,
+  },
 });
 
 export default styles;

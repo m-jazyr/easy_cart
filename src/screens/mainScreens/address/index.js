@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, KeyboardAvoidingView } from 'react-native';
+import { View, Text, KeyboardAvoidingView, Platform } from 'react-native';
 import styles from '../style';
 import { Header } from 'react-native-elements';
 import MainButton from '../../../components/mainButton';
@@ -7,9 +7,53 @@ import AddressInputField from '../../../components/addressInputField';
 import BackArrow from '../../../components/backArrow';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import { requestAndroidPermission } from '../../../utils/utilMethods';
+import { DEFAULT_REGION, LOCATION } from '../../../utils/constants';
+import Geolocation from '@react-native-community/geolocation';
+import { images } from '../../../assets/images';
 
 function AddressScreen({ navigation }) {
+  const [latlng, setLatlng] = React.useState(DEFAULT_REGION);
+  const [address, setAddress] = React.useState('');
+
+  const getLocation = () => {
+    if (Platform.OS === 'ios') {
+      fetchLocation();
+    } else {
+      requestAndroidPermission(LOCATION) ? fetchLocation() : null;
+    }
+  };
+
+  const getAddress = () => {
+    return fetch(
+      `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latlng.latitude}&longitude=${latlng.longitude}&localityLanguage=en`,
+    )
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(JSON.stringify(json));
+        setAddress(json.locality);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const fetchLocation = () => {
+    Geolocation.getCurrentPosition((info) => {
+      setLatlng({
+        latitude: info.coords.latitude,
+        longitude: info.coords.longitude,
+        latitudeDelta: 0.01,
+        longitudeDelta: 0.01,
+      });
+    });
+    getAddress();
+  };
+
+  React.useEffect(() => {
+    getLocation();
+  }, []);
   return (
     <View style={styles.container}>
       <Header
@@ -21,19 +65,26 @@ function AddressScreen({ navigation }) {
         <MapView
           provider={PROVIDER_GOOGLE}
           style={styles.mapContainer}
-          region={{
-            latitude: 37.78825,
-            longitude: -122.4324,
-            latitudeDelta: 0.02,
-            longitudeDelta: 0.02,
-          }}>
-          <Marker
-            coordinate={{
-              latitude: 37.78825,
-              longitude: -122.4324,
-            }}
-          />
-        </MapView>
+          onRegionChangeComplete={(info) => {
+            setLatlng({
+              latitude: info.latitude,
+              longitude: info.longitude,
+              latitudeDelta: info.latitudeDelta,
+              longitudeDelta: info.longitudeDelta,
+            });
+            getAddress();
+          }}
+          region={latlng}
+        />
+        <View style={styles.mapLocation}>
+          <Text style={styles.mapLocationTitle}>Your location:</Text>
+          <Text numberOfLines={1} style={styles.mapLocationText}>
+            {address}
+          </Text>
+        </View>
+        <View style={styles.mapMarker}>
+          <images.pin height={30} width={30} />
+        </View>
       </View>
       <KeyboardAvoidingView
         behavior={'padding'}
