@@ -1,6 +1,6 @@
 import Geolocation from '@react-native-community/geolocation';
 import * as React from 'react';
-import { StyleSheet, View, Text, Platform } from 'react-native';
+import { StyleSheet, View, Text, Platform, NativeModules, NativeEventEmitter } from 'react-native';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import colors from '../assets/colors';
 import fonts from '../assets/fonts';
@@ -8,9 +8,12 @@ import { images } from '../assets/images';
 import { DEFAULT_REGION, LOCATION } from '../utils/constants';
 import { requestAndroidPermission } from '../utils/utilMethods';
 
+const Geocoder = NativeModules.Geocoder;
+
 function MapComponent({ navigation }) {
   const [latlng, setLatlng] = React.useState(DEFAULT_REGION);
   const [address, setAddress] = React.useState('');
+  const eventEmitter = new NativeEventEmitter(Geocoder);
 
   const getLocation = () => {
     if (Platform.OS === 'ios') {
@@ -21,17 +24,20 @@ function MapComponent({ navigation }) {
   };
 
   const getAddress = () => {
-    return fetch(
-      `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latlng.latitude}&longitude=${latlng.longitude}&localityLanguage=en`,
-    )
-      .then((response) => response.json())
-      .then((json) => {
-        console.log(JSON.stringify(json));
-        setAddress(json.locality);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    Platform.OS === 'android'
+      ? Geocoder.getAddress(latlng.latitude, latlng.longitude)
+      : null;
+    // return fetch(
+    //   `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latlng.latitude}&longitude=${latlng.longitude}&localityLanguage=en`,
+    // )
+    //   .then((response) => response.json())
+    //   .then((json) => {
+    //     console.log(JSON.stringify(json));
+    //     setAddress(json.locality);
+    //   })
+    //   .catch((error) => {
+    //     console.error(error);
+    //   });
   };
 
   const fetchLocation = () => {
@@ -46,8 +52,13 @@ function MapComponent({ navigation }) {
     getAddress();
   };
 
+
+
   React.useEffect(() => {
     getLocation();
+    window.eventListener = eventEmitter.addListener('success', (event) => {
+      console.log(JSON.stringify(event)); // "someValue"
+    });
   }, []);
 
   return (
