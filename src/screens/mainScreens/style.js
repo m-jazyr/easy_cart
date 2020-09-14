@@ -69,10 +69,6 @@ const styles = StyleSheet.create({
     marginBottom: 14,
     marginTop: 20,
   },
-  mapContainer: {
-    flexGrow: 1,
-    backgroundColor: colors.grey0,
-  },
   addressSaveAsContainer: {
     flexDirection: 'row',
     marginBottom: 8,
@@ -149,43 +145,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 12,
     paddingVertical: 12,
-  },
-  mapMarker: {
-    position: 'absolute',
-    left: '50%',
-    top: '50%',
-    marginLeft: -15,
-    marginTop: -30,
-  },
-  mapLocation: {
-    position: 'absolute',
-    left: '50%',
-    top: '50%',
-    width: 350,
-    backgroundColor: colors.white,
-    borderRadius: 6,
-    paddingVertical: 2,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginLeft: -175,
-    marginTop: -70,
-    elevation: 5,
-    shadowOffset: {
-      width: 0,
-      height: 0,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-  },
-  mapLocationText: {
-    fontSize: 12,
-    fontFamily: fonts.robotoRegular,
-    color: colors.black,
-  },
-  mapLocationTitle: {
-    fontSize: 12,
-    fontFamily: fonts.robotoBold,
-    color: colors.black,
   },
 });
 
