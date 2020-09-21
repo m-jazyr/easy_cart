@@ -28,6 +28,7 @@ function ProductsScreen({ navigation }) {
           cart.totalCount !== 0 && styles.bottomMargin,
         ]}
         numColumns={2}
+        showsVerticalScrollIndicator={false}
         renderItem={renderCategories}
         data={sampleProducts}
         keyExtractor={(item) => item.id}

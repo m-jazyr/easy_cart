@@ -28,14 +28,14 @@ function OrdersScreen({ navigation }) {
           </ListItem.Content>
           <ListItem.Chevron
             type={'material-community'}
-            name={'chevron-down'}
+            name={showOrder === index ? 'chevron-up' : 'chevron-down'}
             color={colors.primary}
           />
         </ListItem>
         {showOrder === index && (
           <View style={styles.orderContainer}>
-            {profileOptions.map((product) => (
-              <OrderProductTile item={product} />
+            {profileOptions.map((product, index) => (
+              <OrderProductTile item={product} key={index} />
             ))}
             <View style={styles.orderTotalContainer}>
               <Text style={styles.profilePhoneText}>Total</Text>

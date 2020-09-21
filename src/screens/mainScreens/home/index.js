@@ -27,6 +27,7 @@ function HomeScreen({ navigation }) {
       />
 
       <FlatList
+        showsVerticalScrollIndicator={false}
         style={styles.categoryListContainer}
         numColumns={2}
         renderItem={renderCategories}
