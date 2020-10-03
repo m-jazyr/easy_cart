@@ -17,10 +17,10 @@ const MainNavigator = () => {
         screenOptions={{
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}>
-        <Stack.Screen name="Address" component={AddressScreen} />
         <Stack.Screen name="Home" component={TabNavigator} />
         <Stack.Screen name="Products" component={ProductsScreen} />
         <Stack.Screen name="Cart" component={CartScreen} />
+        <Stack.Screen name="Address" component={AddressScreen} />
       </Stack.Navigator>
     </>
   );

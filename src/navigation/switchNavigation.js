@@ -4,12 +4,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import AuthNavigator from './authNavigation';
 import MainNavigator from './mainNavigation';
 import { getStoredValue } from '../utils/storage';
-import { setToken } from '../redux/mainSlice';
+import { mainSelector, setToken } from '../redux/mainSlice';
 import { USER_TOKEN } from '../utils/constants';
+import AlertDialog from '../components/alertDialog';
 
 function SwitchNavigator() {
-  const userToken = useSelector((state) => state.main.userToken);
+  const { userToken } = useSelector(mainSelector)
   const dispatch = useDispatch();
+  
   const fetchToken = async () => {
     let authToken = await getStoredValue(USER_TOKEN);
     dispatch(setToken(authToken));
@@ -21,6 +23,7 @@ function SwitchNavigator() {
 
   return (
     <NavigationContainer>
+      <AlertDialog />
       {userToken != null ? <MainNavigator /> : <AuthNavigator />}
     </NavigationContainer>
   );

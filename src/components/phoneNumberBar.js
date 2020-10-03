@@ -1,17 +1,32 @@
 import * as React from 'react';
-import { StyleSheet, View, Text, Platform } from 'react-native';
+import { StyleSheet, View, Text, Platform, ActivityIndicator } from 'react-native';
 import colors from '../assets/colors';
 import fonts from '../assets/fonts';
 import { Input } from 'react-native-elements';
 import { Keyboard } from 'react-native';
+import { useDispatch, useSelector } from 'react-redux'
+
 import MainButton from './mainButton';
+import { authSelector, showLoader, setUserNumber, callAPIFailed } from '../redux/authSlice';
+import { getOtp } from '../apis/authAPIs';
+import { showError } from '../redux/mainSlice';
 
 function PhoneNumberBar({ navigation }) {
+  const dispatch = useDispatch()
+  const { loading } = useSelector(authSelector)
   const [number, setNumber] = React.useState('');
 
-  const onPressContinue = () => {
+  const onPressContinue = async () => {
     Keyboard.dismiss();
-    navigation.navigate('Verification');
+    dispatch(showLoader());
+    const response = await getOtp(number)
+    if (response.status.success) {
+      dispatch(setUserNumber(number));
+      navigation.navigate('Verification')
+    } else {
+      dispatch(callAPIFailed());
+      dispatch(showError(response.error.message));
+    }
   };
   return (
     <View style={styles.phoneNumberBar}>
@@ -28,11 +43,11 @@ function PhoneNumberBar({ navigation }) {
         keyboardType={'number-pad'}
       />
       <View style={styles.rightItemContainer}>
-        <MainButton
+        {loading ? <ActivityIndicator /> : <MainButton
           title={'Continue'}
           onPress={onPressContinue}
           disabled={number.length < 10}
-        />
+        />}
       </View>
     </View>
   );

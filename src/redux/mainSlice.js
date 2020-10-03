@@ -4,8 +4,8 @@ const mainSlice = createSlice({
   name: 'main',
   initialState: {
     isLoading: true,
-    showAlert: false,
-    userToken: 0,
+    error: '',
+    userToken: null,
   },
   reducers: {
     setToken: (state, action) => {
@@ -14,9 +14,16 @@ const mainSlice = createSlice({
     removeToken: (state, action) => {
       state.userToken = null;
     },
+    showError: (state, { payload }) => {
+      state.error = payload;
+    },
+    hideError: (state) => {
+      state.error = '';
+    }
   },
 });
 
+export const mainSelector = state => state.main
 const { actions, reducer } = mainSlice;
-export const { setToken, removeToken } = actions;
+export const { setToken, removeToken, showError, hideError } = actions;
 export default reducer;

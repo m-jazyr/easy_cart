@@ -1,21 +1,33 @@
 import * as React from 'react';
-import { View, Text, KeyboardAvoidingView } from 'react-native';
+import { View, Text, KeyboardAvoidingView, Keyboard, ActivityIndicator } from 'react-native';
 import styles from '../style';
 import { Header, Input } from 'react-native-elements';
 import BackArrow from '../../../components/backArrow';
 import MainButton from '../../../components/mainButton';
-import { useDispatch } from 'react-redux';
-import { setToken } from '../../../redux/mainSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { setToken, showError } from '../../../redux/mainSlice';
 import { storeValue } from '../../../utils/storage';
 import { USER_TOKEN } from '../../../utils/constants';
+import { verifyOtp } from '../../../apis/authAPIs';
+import { authSelector, callAPIFailed, hideLoader, showLoader } from '../../../redux/authSlice';
 
 function VerificationScreen({ navigation }) {
+  const dispatch = useDispatch()
+  const { loading } = useSelector(authSelector)
   const [otp, setOtp] = React.useState('');
-  const dispatch = useDispatch();
 
-  const onVerifyOTP = () => {
-    storeValue(USER_TOKEN, otp);
-    dispatch(setToken(otp));
+  const onVerifyOTP = async () => {
+    Keyboard.dismiss();
+    dispatch(showLoader());
+    const response = await verifyOtp(otp)
+    if (response.status.success) {
+      dispatch(hideLoader());
+      storeValue(USER_TOKEN,response.data[0].token)
+      dispatch(setToken(response.data[0].token));
+    } else {
+      dispatch(callAPIFailed());
+      dispatch(showError(response.error.message));
+    }
   };
 
   return (
@@ -36,7 +48,7 @@ function VerificationScreen({ navigation }) {
           inputStyle={styles.otpInputStyle}
           keyboardType={'number-pad'}
           placeholder={'Enter OTP'}
-          maxLength={4}
+          // maxLength={4}
           value={otp}
           onChangeText={(text) => setOtp(text)}
         />
@@ -49,11 +61,11 @@ function VerificationScreen({ navigation }) {
         style={styles.verifyButtonContainer}
         behavior={'padding'}
         keyboardVerticalOffset={30}>
-        <MainButton
+        {loading ? <ActivityIndicator /> : <MainButton
           title={'Verify and Continue'}
-          disabled={otp.length < 4}
+          disabled={otp.length < 1}
           onPress={() => onVerifyOTP()}
-        />
+        />}
       </KeyboardAvoidingView>
     </View>
   );
