@@ -10,6 +10,7 @@ import order from './order.svg';
 import contactUs from './contact-us.svg';
 import logout from './logout.svg';
 import pin from './pin.svg';
+import logo from './bootsplash_logo.png';
 
 export const images = {
   dummy1,
@@ -24,4 +25,5 @@ export const images = {
   order,
   logout,
   pin,
+  logo
 };
