@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, View, Text, Platform, ActivityIndicator } from 'react-native';
+import { StyleSheet, View, Text, Platform } from 'react-native';
 import colors from '../assets/colors';
 import fonts from '../assets/fonts';
 import { Input } from 'react-native-elements';
@@ -43,11 +43,12 @@ function PhoneNumberBar({ navigation }) {
         keyboardType={'number-pad'}
       />
       <View style={styles.rightItemContainer}>
-        {loading ? <ActivityIndicator /> : <MainButton
+        <MainButton
+        loading={loading}
           title={'Continue'}
           onPress={onPressContinue}
           disabled={number.length < 10}
-        />}
+        />
       </View>
     </View>
   );

@@ -22,7 +22,6 @@ export const verifyOtp = (otp) => {
     phone_no: user.phone,
     otp: otp,
   };
-  console.log(bodyObj)
   const options = {
     baseUrl: API_BASE + 'verify_otp/',
     method: 'POST',

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, KeyboardAvoidingView, Keyboard, ActivityIndicator } from 'react-native';
+import { View, Text, KeyboardAvoidingView, Keyboard } from 'react-native';
 import styles from '../style';
 import { Header, Input } from 'react-native-elements';
 import BackArrow from '../../../components/backArrow';
@@ -13,7 +13,7 @@ import { authSelector, callAPIFailed, hideLoader, showLoader } from '../../../re
 
 function VerificationScreen({ navigation }) {
   const dispatch = useDispatch()
-  const { loading } = useSelector(authSelector)
+  const { loading, user } = useSelector(authSelector)
   const [otp, setOtp] = React.useState('');
 
   const onVerifyOTP = async () => {
@@ -22,7 +22,7 @@ function VerificationScreen({ navigation }) {
     const response = await verifyOtp(otp)
     if (response.status.success) {
       dispatch(hideLoader());
-      storeValue(USER_TOKEN,response.data[0].token)
+      storeValue(USER_TOKEN, response.data[0].token)
       dispatch(setToken(response.data[0].token));
     } else {
       dispatch(callAPIFailed());
@@ -40,7 +40,7 @@ function VerificationScreen({ navigation }) {
         <View style={styles.verifyTitleContainer}>
           <Text style={styles.verifyTitle}>Verify mobile number</Text>
           <Text style={styles.verifyNumber}>
-            Enter the OTP sent to {'9567664990'}
+            Enter the OTP sent to {user.phone}
           </Text>
         </View>
         <Input
@@ -61,11 +61,12 @@ function VerificationScreen({ navigation }) {
         style={styles.verifyButtonContainer}
         behavior={'padding'}
         keyboardVerticalOffset={30}>
-        {loading ? <ActivityIndicator /> : <MainButton
+        <MainButton
+          loading={loading}
           title={'Verify and Continue'}
           disabled={otp.length < 1}
           onPress={() => onVerifyOTP()}
-        />}
+        />
       </KeyboardAvoidingView>
     </View>
   );

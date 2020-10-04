@@ -4,7 +4,7 @@ import colors from '../assets/colors';
 import fonts from '../assets/fonts';
 import { Button } from 'react-native-elements';
 
-function MainButton({ title, onPress, disabled, style }) {
+function MainButton({ title, onPress, disabled, style,loading }) {
   return (
     <Button
       title={title}
@@ -12,6 +12,7 @@ function MainButton({ title, onPress, disabled, style }) {
       buttonStyle={styles.buttonContainer}
       titleStyle={styles.buttonText}
       onPress={onPress}
+      loading={loading}
       disabled={disabled}
     />
   );
