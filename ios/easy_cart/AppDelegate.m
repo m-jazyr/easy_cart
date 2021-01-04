@@ -13,6 +13,7 @@
 #import <FlipperKitReactPlugin/FlipperKitReactPlugin.h>
 #import <GoogleMaps/GoogleMaps.h>
 #import "RNBootSplash.h"
+#import <Firebase.h>
 
 static void InitializeFlipper(UIApplication *application) {
   FlipperClient *client = [FlipperClient sharedClient];
@@ -29,6 +30,9 @@ static void InitializeFlipper(UIApplication *application) {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  if ([FIRApp defaultApp] == nil) {
+     [FIRApp configure];
+   }
   [GMSServices provideAPIKey:@"AIzaSyBShpP-AZyXUdI0gnlyiZ60uWyAYZ0nSPs"];
 #ifdef FB_SONARKIT_ENABLED
   InitializeFlipper(application);

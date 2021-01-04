@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "345151678891",
+    "project_id": "easy-cart-289414",
+    "storage_bucket": "easy-cart-289414.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345151678891:android:da9a04c249a7be42a3caee",
+        "android_client_info": {
+          "package_name": "com.easy_cart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "345151678891-7poihmadgdvhmrvgngopan96mer5i1ij.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.easy_cart",
+            "certificate_hash": "bcfbb2be2a808c3ce1c72dc306210d7d48b16cca"
+          }
+        },
+        {
+          "client_id": "345151678891-qkedld2n285q4a53p76o294tpqt5lkfb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2E642udUM10hVqXYt-Ca0vfW6R5RtGdA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "345151678891-qkedld2n285q4a53p76o294tpqt5lkfb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
