@@ -8,18 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* easy_cartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* easy_cartTests.m */; };
+		03EC99044AD54507AE6087D3 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 190F89C725944122A898137D /* RobotoCondensed-Light.ttf */; };
+		0799387F1AF048E0B3A26EA2 /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C164790B2CFB4A14B6E4693A /* Pacifico.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		19C1F51117BD4C0CB0ED3AB3 /* Antonio-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8FFA426F2C44918704F0A3 /* Antonio-Light.ttf */; };
+		1CC7011E0AE24E219D788908 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFED6AFC7B1A49C1A8D4F987 /* RobotoCondensed-Regular.ttf */; };
+		1CE73667E3A844848FA209B7 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 106991F1C753435BB993AB42 /* OpenSans-Light.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* easy_cartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* easy_cartTests.m */; };
+		34BEC7381362462296C93C02 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EFE1D70F5794C22AE12D44A /* Montserrat-Bold.ttf */; };
+		39CEE2CAE7114175BD71BDA7 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4A494ADDA8343989F8293FD /* Roboto-Regular.ttf */; };
+		404BAE0835464AA6B2959FEB /* MontereyMediumFLF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0A6FDBCF1334674AE0628C0 /* MontereyMediumFLF.ttf */; };
 		41F8E1170BA323D170FD3963 /* libPods-easy_cart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5C154B5C4F724965611403 /* libPods-easy_cart.a */; };
+		42F4B0DEF12B4426950ECF57 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F189EA5147674762A1D84AD5 /* RobotoCondensed-Bold.ttf */; };
+		442DF5B0C17A4E63A431146C /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25B454C615CF4B13A8F8EC30 /* Roboto-Thin.ttf */; };
 		4E13B23584D1F05AE8E92ABC /* libPods-easy_cart-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B2F4DB6BC8029959A77477 /* libPods-easy_cart-tvOSTests.a */; };
 		57E5EE3FAD34B58CF41C7115 /* libPods-easy_cart-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D289685AED52872E1D09A699 /* libPods-easy_cart-tvOS.a */; };
+		81242D8580624810A98B4619 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9FA997D9FCB4857A68B9442 /* OpenSans-Bold.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		85C6B7410A6F49087006EB47 /* libPods-easy_cart-easy_cartTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6DDB9CFFBF8AC885FB94E8 /* libPods-easy_cart-easy_cartTests.a */; };
+		8BFEE0E1A6B048348367A31F /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE71A1034BAE404B8A364A07 /* Roboto-Bold.ttf */; };
+		AB5508F6B30048698EACC677 /* HighlandGothicFLF-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 445DC6FAE9E34D368CB9F9FC /* HighlandGothicFLF-Bold.ttf */; };
+		BBA8378A48B949639662125F /* HighlandGothicFLF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D96E2E9E2DDE448CBF3BC989 /* HighlandGothicFLF.ttf */; };
+		CE5AC77843814BEFBE2A2BDA /* HighlandGothicLightFLF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFF14ED33FCF4F3A8663B6F6 /* HighlandGothicLightFLF.ttf */; };
+		E714111BB19F46F384999BEF /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C41511D78F24A38BF9B11F2 /* Montserrat-Regular.ttf */; };
+		E7D1A6C10E5C42FDBB45BBD4 /* Antonio-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 246FD185475046FFAF8A252B /* Antonio-Bold.ttf */; };
+		EEB55B03ED35414080646AC4 /* MontereyFLF-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E0C6FBD91B5A46E89FA35B64 /* MontereyFLF-Bold.ttf */; };
+		EF0D82D32529BAF300796AC5 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0D82D22529BAF200796AC5 /* BootSplash.storyboard */; };
+		F86F9B8A654843EBB40F9045 /* Antonio-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5C3E62E6573402CB0A5CC5C /* Antonio-Regular.ttf */; };
+		FBCC59A23FFD447E91B9DADD /* MontereyFLF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81BD7891D76A4CF7946360FE /* MontereyFLF.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,29 +65,50 @@
 		00E356EE1AD99517003FC87E /* easy_cartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = easy_cartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* easy_cartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = easy_cartTests.m; sourceTree = "<group>"; };
+		106991F1C753435BB993AB42 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Light.ttf"; path = "../src/assets/fonts/OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* easy_cart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easy_cart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = easy_cart/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = easy_cart/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = easy_cart/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = easy_cart/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = easy_cart/main.m; sourceTree = "<group>"; };
+		190F89C725944122A898137D /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoCondensed-Light.ttf"; path = "../src/assets/fonts/RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
 		1F4EEEEED6951D76DE65BF9A /* Pods-easy_cart-easy_cartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easy_cart-easy_cartTests.debug.xcconfig"; path = "Target Support Files/Pods-easy_cart-easy_cartTests/Pods-easy_cart-easy_cartTests.debug.xcconfig"; sourceTree = "<group>"; };
+		246FD185475046FFAF8A252B /* Antonio-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Antonio-Bold.ttf"; path = "../src/assets/fonts/Antonio-Bold.ttf"; sourceTree = "<group>"; };
+		25B454C615CF4B13A8F8EC30 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Thin.ttf"; path = "../src/assets/fonts/Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* easy_cart-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "easy_cart-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* easy_cart-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "easy_cart-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3770C222313E11C490F6CB /* Pods-easy_cart-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easy_cart-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-easy_cart-tvOSTests/Pods-easy_cart-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		445DC6FAE9E34D368CB9F9FC /* HighlandGothicFLF-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "HighlandGothicFLF-Bold.ttf"; path = "../src/assets/fonts/HighlandGothicFLF-Bold.ttf"; sourceTree = "<group>"; };
 		4A131E485A14A0C92E2933D7 /* Pods-easy_cart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easy_cart.release.xcconfig"; path = "Target Support Files/Pods-easy_cart/Pods-easy_cart.release.xcconfig"; sourceTree = "<group>"; };
 		76C8C12E8F05820FCBCB115E /* Pods-easy_cart-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easy_cart-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-easy_cart-tvOSTests/Pods-easy_cart-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C41511D78F24A38BF9B11F2 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Regular.ttf"; path = "../src/assets/fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		7EFE1D70F5794C22AE12D44A /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Bold.ttf"; path = "../src/assets/fonts/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = easy_cart/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		81BD7891D76A4CF7946360FE /* MontereyFLF.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MontereyFLF.ttf; path = ../src/assets/fonts/MontereyFLF.ttf; sourceTree = "<group>"; };
 		94B2F4DB6BC8029959A77477 /* libPods-easy_cart-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-easy_cart-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C9353D8556B22D6DBCBBFE /* Pods-easy_cart-easy_cartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easy_cart-easy_cartTests.release.xcconfig"; path = "Target Support Files/Pods-easy_cart-easy_cartTests/Pods-easy_cart-easy_cartTests.release.xcconfig"; sourceTree = "<group>"; };
 		A98EB4514662458AFC91E4E2 /* Pods-easy_cart-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easy_cart-tvOS.release.xcconfig"; path = "Target Support Files/Pods-easy_cart-tvOS/Pods-easy_cart-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		B11BF34E77FA280E0674CAD1 /* Pods-easy_cart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easy_cart.debug.xcconfig"; path = "Target Support Files/Pods-easy_cart/Pods-easy_cart.debug.xcconfig"; sourceTree = "<group>"; };
 		B225B624EEE28E1333AFBF83 /* Pods-easy_cart-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easy_cart-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-easy_cart-tvOS/Pods-easy_cart-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BE71A1034BAE404B8A364A07 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../src/assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		C0A6FDBCF1334674AE0628C0 /* MontereyMediumFLF.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MontereyMediumFLF.ttf; path = ../src/assets/fonts/MontereyMediumFLF.ttf; sourceTree = "<group>"; };
+		C164790B2CFB4A14B6E4693A /* Pacifico.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Pacifico.ttf; path = ../src/assets/fonts/Pacifico.ttf; sourceTree = "<group>"; };
+		C5C3E62E6573402CB0A5CC5C /* Antonio-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Antonio-Regular.ttf"; path = "../src/assets/fonts/Antonio-Regular.ttf"; sourceTree = "<group>"; };
 		CD6DDB9CFFBF8AC885FB94E8 /* libPods-easy_cart-easy_cartTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-easy_cart-easy_cartTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D289685AED52872E1D09A699 /* libPods-easy_cart-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-easy_cart-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D96E2E9E2DDE448CBF3BC989 /* HighlandGothicFLF.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = HighlandGothicFLF.ttf; path = ../src/assets/fonts/HighlandGothicFLF.ttf; sourceTree = "<group>"; };
+		E0C6FBD91B5A46E89FA35B64 /* MontereyFLF-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MontereyFLF-Bold.ttf"; path = "../src/assets/fonts/MontereyFLF-Bold.ttf"; sourceTree = "<group>"; };
+		EA8FFA426F2C44918704F0A3 /* Antonio-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Antonio-Light.ttf"; path = "../src/assets/fonts/Antonio-Light.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		EF0D82D22529BAF200796AC5 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = easy_cart/BootSplash.storyboard; sourceTree = "<group>"; };
+		EFF14ED33FCF4F3A8663B6F6 /* HighlandGothicLightFLF.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = HighlandGothicLightFLF.ttf; path = ../src/assets/fonts/HighlandGothicLightFLF.ttf; sourceTree = "<group>"; };
+		F189EA5147674762A1D84AD5 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoCondensed-Bold.ttf"; path = "../src/assets/fonts/RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		F4A494ADDA8343989F8293FD /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../src/assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		F9FA997D9FCB4857A68B9442 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Bold.ttf"; path = "../src/assets/fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		FB5C154B5C4F724965611403 /* libPods-easy_cart.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-easy_cart.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFED6AFC7B1A49C1A8D4F987 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoCondensed-Regular.ttf"; path = "../src/assets/fonts/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +167,7 @@
 		13B07FAE1A68108700A75B9A /* easy_cart */ = {
 			isa = PBXGroup;
 			children = (
+				EF0D82D22529BAF200796AC5 /* BootSplash.storyboard */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -165,6 +208,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				8A2433BC3AB627343632042A /* Pods */,
+				92C36FBB0AD04BA392A4E30C /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -194,8 +238,34 @@
 				76C8C12E8F05820FCBCB115E /* Pods-easy_cart-tvOSTests.debug.xcconfig */,
 				2E3770C222313E11C490F6CB /* Pods-easy_cart-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		92C36FBB0AD04BA392A4E30C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				246FD185475046FFAF8A252B /* Antonio-Bold.ttf */,
+				EA8FFA426F2C44918704F0A3 /* Antonio-Light.ttf */,
+				C5C3E62E6573402CB0A5CC5C /* Antonio-Regular.ttf */,
+				7EFE1D70F5794C22AE12D44A /* Montserrat-Bold.ttf */,
+				7C41511D78F24A38BF9B11F2 /* Montserrat-Regular.ttf */,
+				F9FA997D9FCB4857A68B9442 /* OpenSans-Bold.ttf */,
+				106991F1C753435BB993AB42 /* OpenSans-Light.ttf */,
+				C164790B2CFB4A14B6E4693A /* Pacifico.ttf */,
+				BE71A1034BAE404B8A364A07 /* Roboto-Bold.ttf */,
+				F4A494ADDA8343989F8293FD /* Roboto-Regular.ttf */,
+				25B454C615CF4B13A8F8EC30 /* Roboto-Thin.ttf */,
+				445DC6FAE9E34D368CB9F9FC /* HighlandGothicFLF-Bold.ttf */,
+				D96E2E9E2DDE448CBF3BC989 /* HighlandGothicFLF.ttf */,
+				EFF14ED33FCF4F3A8663B6F6 /* HighlandGothicLightFLF.ttf */,
+				E0C6FBD91B5A46E89FA35B64 /* MontereyFLF-Bold.ttf */,
+				81BD7891D76A4CF7946360FE /* MontereyFLF.ttf */,
+				C0A6FDBCF1334674AE0628C0 /* MontereyMediumFLF.ttf */,
+				F189EA5147674762A1D84AD5 /* RobotoCondensed-Bold.ttf */,
+				190F89C725944122A898137D /* RobotoCondensed-Light.ttf */,
+				FFED6AFC7B1A49C1A8D4F987 /* RobotoCondensed-Regular.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +322,7 @@
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
 				2D02E4791E0B4A5D006451C7 /* Resources */,
 				2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */,
+				08F2FDDC1AB7C0C4D53F8C2B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -342,6 +413,27 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				E7D1A6C10E5C42FDBB45BBD4 /* Antonio-Bold.ttf in Resources */,
+				19C1F51117BD4C0CB0ED3AB3 /* Antonio-Light.ttf in Resources */,
+				F86F9B8A654843EBB40F9045 /* Antonio-Regular.ttf in Resources */,
+				34BEC7381362462296C93C02 /* Montserrat-Bold.ttf in Resources */,
+				E714111BB19F46F384999BEF /* Montserrat-Regular.ttf in Resources */,
+				81242D8580624810A98B4619 /* OpenSans-Bold.ttf in Resources */,
+				1CE73667E3A844848FA209B7 /* OpenSans-Light.ttf in Resources */,
+				0799387F1AF048E0B3A26EA2 /* Pacifico.ttf in Resources */,
+				8BFEE0E1A6B048348367A31F /* Roboto-Bold.ttf in Resources */,
+				39CEE2CAE7114175BD71BDA7 /* Roboto-Regular.ttf in Resources */,
+				442DF5B0C17A4E63A431146C /* Roboto-Thin.ttf in Resources */,
+				AB5508F6B30048698EACC677 /* HighlandGothicFLF-Bold.ttf in Resources */,
+				BBA8378A48B949639662125F /* HighlandGothicFLF.ttf in Resources */,
+				CE5AC77843814BEFBE2A2BDA /* HighlandGothicLightFLF.ttf in Resources */,
+				EF0D82D32529BAF300796AC5 /* BootSplash.storyboard in Resources */,
+				EEB55B03ED35414080646AC4 /* MontereyFLF-Bold.ttf in Resources */,
+				FBCC59A23FFD447E91B9DADD /* MontereyFLF.ttf in Resources */,
+				404BAE0835464AA6B2959FEB /* MontereyMediumFLF.ttf in Resources */,
+				42F4B0DEF12B4426950ECF57 /* RobotoCondensed-Bold.ttf in Resources */,
+				03EC99044AD54507AE6087D3 /* RobotoCondensed-Light.ttf in Resources */,
+				1CC7011E0AE24E219D788908 /* RobotoCondensed-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +469,26 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		08F2FDDC1AB7C0C4D53F8C2B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-easy_cart-tvOS/Pods-easy_cart-tvOS-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core.common/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-easy_cart-tvOS/Pods-easy_cart-tvOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -398,6 +510,8 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-easy_cart-easy_cartTests/Pods-easy_cart-easy_cartTests-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core.common-CoreModulesHeaders/AccessibilityResources.bundle",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -414,10 +528,11 @@
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
-				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
@@ -434,7 +549,6 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -536,6 +650,8 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-easy_cart/Pods-easy_cart-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core.common-CoreModulesHeaders/AccessibilityResources.bundle",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -552,10 +668,11 @@
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
-				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
@@ -572,7 +689,6 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
